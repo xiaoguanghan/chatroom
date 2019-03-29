@@ -4,7 +4,7 @@ var express = require('express'),
     io = require('socket.io').listen(server);
     users=[];
 app.use('/', express.static(__dirname + '/'));
-server.listen(80);
+server.listen(process.env.PORT || 80);
 
 console.log('server up');
 io.on('connection', (socket) => {

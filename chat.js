@@ -33,14 +33,16 @@ Chat.prototype = {
 
         this.socket.on('system', function (nickName, userCount, type) {
             //show the login/out info
-            var msg = nickName + (type == 'login' ? ' joined' : ' left');
-            var p = document.createElement('p');
-            p.textContent = msg;
-            p.setAttribute('class','system');
-            document.getElementById('historyMsg').appendChild(p);
-            //console.log(userCount);
-            //that._displayNewMsg('system ', msg, 'red');
-            document.getElementById('status').textContent = userCount + (userCount > 1 ? ' users' : ' user') + ' online';
+            if(nickName){
+                var msg = nickName + (type == 'login' ? ' joined' : ' left');
+                var p = document.createElement('p');
+                p.textContent = msg;
+                p.setAttribute('class','system');
+                document.getElementById('historyMsg').appendChild(p);
+                //console.log(userCount);
+                //that._displayNewMsg('system ', msg, 'red');
+                document.getElementById('status').textContent = userCount + (userCount > 1 ? ' users' : ' user') + ' online';
+            }            
         });
 
         this.socket.on('newMsg', function(user, msg) {
