@@ -23,7 +23,11 @@ html, body {
     padding-top: 200px;
 }
 #nickWrapper {
+    height: 500px;
     display: none;
+}
+#info {
+    font-size: 40px;
 }
 .banner {
     height: 80px;
@@ -42,7 +46,7 @@ html, body {
     height: 400px;
     background-color: #fff;
     overflow: auto;
-    padding: 2px;
+    padding: 8px;
 }
 #historyMsg img {
     max-width: 99%;
