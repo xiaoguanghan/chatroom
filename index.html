@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="main.css">
+	<title></title>
+</head>
+
+<body>
+	<div class='wrapper'>
+		<h1> Chat Room </h1>
+		<span id="status"> 1 user online</span>
+		<div id="historyMsg">
+			
+		</div>
+
+		<div class='controls'>
+			<textarea id="messageInput" placeHolder="Enter to send"></textarea>
+			<input id='sendBtn' type='button' value="send">
+			<!-- <button id ='send'>SEND</button> -->
+		</div>
+	</div>
+
+	<div id="loginWrapper">
+		<p id="info">connecting to server...</p>
+		<div id="nickWrapper">
+			<input type="text" placeHolder="nickname" id="nicknameInput" />
+			<input type="button" value="OK" id="loginBtn" />
+		</div>
+	</div>
+
+
+
+	<script src='node_modules/socket.io-client/dist/socket.io.js'></script>
+	<script src='chat.js'></script>
+</body>
+
+</html>
